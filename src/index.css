@@ -155,3 +155,14 @@
     animation: none;
   }
 }
+
+
+.home-wallpaper {
+  background-color: #101010;
+  background-image:
+    linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
+    url("/wallpaper.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

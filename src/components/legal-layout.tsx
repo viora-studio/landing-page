@@ -84,18 +84,30 @@ function ThemeToggle() {
   )
 }
 
-function NavigationLinks({ onNavigate }: { onNavigate?: () => void }) {
+function NavigationLinks({
+  onNavigate,
+  mobile = false,
+}: {
+  onNavigate?: () => void
+  mobile?: boolean
+}) {
   const { t } = useLanguage()
 
   return (
-    <nav aria-label={t.nav.navigationLabel} className="flex items-center gap-5 text-sm">
+    <nav
+      aria-label={t.nav.navigationLabel}
+      className={mobile ? "flex w-full flex-col items-stretch gap-1 text-sm" : "flex items-center gap-5 text-sm"}
+    >
       <NavLink
         to="/privacy"
         onClick={onNavigate}
         className={({ isActive }) =>
-          isActive
-            ? "text-foreground"
-            : "text-muted-foreground transition-colors hover:text-foreground"
+          [
+            isActive
+              ? "text-foreground"
+              : "text-muted-foreground transition-colors hover:text-foreground",
+            mobile ? "w-full rounded-xl px-3 py-3 hover:bg-muted" : "",
+          ].join(" ")
         }
       >
         {t.nav.privacy}
@@ -104,9 +116,12 @@ function NavigationLinks({ onNavigate }: { onNavigate?: () => void }) {
         to="/terms"
         onClick={onNavigate}
         className={({ isActive }) =>
-          isActive
-            ? "text-foreground"
-            : "text-muted-foreground transition-colors hover:text-foreground"
+          [
+            isActive
+              ? "text-foreground"
+              : "text-muted-foreground transition-colors hover:text-foreground",
+            mobile ? "w-full rounded-xl px-3 py-3 hover:bg-muted" : "",
+          ].join(" ")
         }
       >
         {t.nav.terms}
@@ -167,7 +182,7 @@ export function LegalLayout({ children }: { children: ReactNode }) {
 
                   <div className="flex flex-1 flex-col gap-8 px-6 py-4">
                     <div className="flex flex-col items-stretch gap-2">
-                      <NavigationLinks onNavigate={() => setMenuOpen(false)} />
+                      <NavigationLinks mobile onNavigate={() => setMenuOpen(false)} />
                     </div>
 
                     <div className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-5">

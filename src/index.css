@@ -128,3 +128,30 @@
     @apply font-sans;
     }
 }
+
+
+@keyframes viora-dot-blink {
+  0%,
+  82%,
+  100% {
+    opacity: 1;
+  }
+
+  86% {
+    opacity: 0.18;
+  }
+
+  90% {
+    opacity: 1;
+  }
+}
+
+.animate-viora-dot-blink {
+  animation: viora-dot-blink 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-viora-dot-blink {
+    animation: none;
+  }
+}

@@ -7,6 +7,9 @@ export const translations = {
       privacy: "Privacidade",
       terms: "Termos",
       language: "English",
+      languageLabel: "Idioma",
+      toggleTheme: "Alterar tema",
+      navigationLabel: "Navegação principal",
     },
     home: {
       title: "Viora está a chegar.",
@@ -79,6 +82,9 @@ export const translations = {
       privacy: "Privacy",
       terms: "Terms",
       language: "Português",
+      languageLabel: "Language",
+      toggleTheme: "Toggle theme",
+      navigationLabel: "Main navigation",
     },
     home: {
       title: "Viora is coming.",

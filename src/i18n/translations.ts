@@ -12,10 +12,6 @@ export const translations = {
       navigationLabel: "Navegação principal",
       openMenu: "Abrir menu",
     },
-    home: {
-      title: "Viora está a chegar.",
-      subtitle: "Esta é uma frase de teste para a página principal.",
-    },
     footer: {
       rights: "© {{year}} Viora. Todos os direitos reservados.",
       privacy: "Política de Privacidade",
@@ -87,10 +83,6 @@ export const translations = {
       toggleTheme: "Toggle theme",
       navigationLabel: "Main navigation",
       openMenu: "Open menu",
-    },
-    home: {
-      title: "Viora is coming.",
-      subtitle: "This is a test sentence for the homepage.",
     },
     footer: {
       rights: "© {{year}} Viora. All rights reserved.",

@@ -21,7 +21,6 @@ import {
 } from "@/components/ui/select"
 import { useTheme } from "@/components/theme-provider"
 import { useLanguage } from "@/i18n/language-provider"
-import type { Language } from "@/i18n/translations"
 
 function LanguageSelector() {
   const { language, setLanguage, t } = useLanguage()
@@ -92,40 +91,42 @@ function NavigationLinks({
   mobile?: boolean
 }) {
   const { t } = useLanguage()
+  const links = [
+    { to: "/", label: t.nav.home, end: true },
+    { to: "/companies", label: t.nav.companies },
+    { to: "/privacy", label: t.nav.privacy },
+    { to: "/terms", label: t.nav.terms },
+    { to: "/about", label: t.nav.about },
+  ]
+
+  const linkClassName = (isActive: boolean) =>
+    [
+      isActive
+        ? "text-foreground"
+        : "text-muted-foreground transition-colors hover:text-foreground",
+      mobile ? "w-full rounded-xl px-3 py-3 hover:bg-muted" : "",
+    ].join(" ")
 
   return (
     <nav
       aria-label={t.nav.navigationLabel}
-      className={mobile ? "flex w-full flex-col items-stretch gap-1 text-sm" : "flex items-center gap-5 text-sm"}
+      className={
+        mobile
+          ? "flex w-full flex-col items-stretch gap-1 text-sm"
+          : "flex items-center gap-5 text-sm"
+      }
     >
-      <NavLink
-        to="/privacy"
-        onClick={onNavigate}
-        className={({ isActive }) =>
-          [
-            isActive
-              ? "text-foreground"
-              : "text-muted-foreground transition-colors hover:text-foreground",
-            mobile ? "w-full rounded-xl px-3 py-3 hover:bg-muted" : "",
-          ].join(" ")
-        }
-      >
-        {t.nav.privacy}
-      </NavLink>
-      <NavLink
-        to="/terms"
-        onClick={onNavigate}
-        className={({ isActive }) =>
-          [
-            isActive
-              ? "text-foreground"
-              : "text-muted-foreground transition-colors hover:text-foreground",
-            mobile ? "w-full rounded-xl px-3 py-3 hover:bg-muted" : "",
-          ].join(" ")
-        }
-      >
-        {t.nav.terms}
-      </NavLink>
+      {links.map((link) => (
+        <NavLink
+          key={link.to}
+          to={link.to}
+          end={link.end}
+          onClick={onNavigate}
+          className={({ isActive }) => linkClassName(isActive)}
+        >
+          {link.label}
+        </NavLink>
+      ))}
     </nav>
   )
 }
@@ -182,7 +183,10 @@ export function LegalLayout({ children }: { children: ReactNode }) {
 
                   <div className="flex flex-1 flex-col gap-8 px-6 py-4">
                     <div className="flex flex-col items-stretch gap-2">
-                      <NavigationLinks mobile onNavigate={() => setMenuOpen(false)} />
+                      <NavigationLinks
+                        mobile
+                        onNavigate={() => setMenuOpen(false)}
+                      />
                     </div>
 
                     <div className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-5">

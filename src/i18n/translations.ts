@@ -1,7 +1,6 @@
 export type Language = "pt" | "en"
 
 export const translations = {
-  pt: {
     nav: {
       home: "Início",
       privacy: "Privacidade",
@@ -10,6 +9,7 @@ export const translations = {
       languageLabel: "Idioma",
       toggleTheme: "Alterar tema",
       navigationLabel: "Navegação principal",
+      openMenu: "Abrir menu",
     },
     home: {
       title: "Viora está a chegar.",

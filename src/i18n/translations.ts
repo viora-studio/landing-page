@@ -85,6 +85,7 @@ export const translations = {
       languageLabel: "Language",
       toggleTheme: "Toggle theme",
       navigationLabel: "Main navigation",
+      openMenu: "Open menu",
     },
     home: {
       title: "Viora is coming.",

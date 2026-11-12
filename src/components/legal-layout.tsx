@@ -1,9 +1,17 @@
-import { Moon, Sun } from "lucide-react"
+import { useState, type ReactNode } from "react"
+import { Menu, Moon, Sun } from "lucide-react"
 import { Link, NavLink } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/ui/footer"
 import { Header, HeaderBrand, HeaderContent, HeaderTitle } from "@/components/ui/header"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import {
   Select,
   SelectContent,
@@ -76,7 +84,39 @@ function ThemeToggle() {
   )
 }
 
-export function LegalLayout({ children }: { children: React.ReactNode }) {
+function NavigationLinks({ onNavigate }: { onNavigate?: () => void }) {
+  const { t } = useLanguage()
+
+  return (
+    <nav aria-label={t.nav.navigationLabel} className="flex items-center gap-5 text-sm">
+      <NavLink
+        to="/privacy"
+        onClick={onNavigate}
+        className={({ isActive }) =>
+          isActive
+            ? "text-foreground"
+            : "text-muted-foreground transition-colors hover:text-foreground"
+        }
+      >
+        {t.nav.privacy}
+      </NavLink>
+      <NavLink
+        to="/terms"
+        onClick={onNavigate}
+        className={({ isActive }) =>
+          isActive
+            ? "text-foreground"
+            : "text-muted-foreground transition-colors hover:text-foreground"
+        }
+      >
+        {t.nav.terms}
+      </NavLink>
+    </nav>
+  )
+}
+
+export function LegalLayout({ children }: { children: ReactNode }) {
+  const [menuOpen, setMenuOpen] = useState(false)
   const { t } = useLanguage()
 
   return (
@@ -91,32 +131,52 @@ export function LegalLayout({ children }: { children: React.ReactNode }) {
             </Link>
           </HeaderBrand>
 
-          <HeaderContent className="ml-auto gap-3">
-            <nav aria-label={t.nav.navigationLabel} className="flex items-center gap-5 text-sm">
-              <NavLink
-                to="/privacy"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }
-              >
-                {t.nav.privacy}
-              </NavLink>
-              <NavLink
-                to="/terms"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }
-              >
-                {t.nav.terms}
-              </NavLink>
-            </nav>
-            <div className="flex items-center gap-2">
+          <div className="hidden flex-1 items-center justify-center md:flex">
+            <NavigationLinks />
+          </div>
+
+          <HeaderContent className="ml-auto gap-2 md:ml-0">
+            <div className="hidden items-center gap-2 md:flex">
               <LanguageSelector />
               <ThemeToggle />
+            </div>
+
+            <div className="flex items-center gap-2 md:hidden">
+              <ThemeToggle />
+              <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+                <SheetTrigger
+                  render={
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon"
+                      className="rounded-full"
+                      aria-label={t.nav.openMenu}
+                      aria-expanded={menuOpen}
+                    />
+                  }
+                >
+                  <Menu aria-hidden="true" className="size-5" />
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[min(85vw,20rem)]">
+                  <SheetHeader>
+                    <SheetTitle className="text-lg font-semibold tracking-tight">
+                      viora<span className="text-primary">.</span>
+                    </SheetTitle>
+                  </SheetHeader>
+
+                  <div className="flex flex-1 flex-col gap-8 px-6 py-4">
+                    <div className="flex flex-col items-stretch gap-2">
+                      <NavigationLinks onNavigate={() => setMenuOpen(false)} />
+                    </div>
+
+                    <div className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-5">
+                      <LanguageSelector />
+                      <ThemeToggle />
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </HeaderContent>
         </div>

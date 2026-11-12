@@ -78,7 +78,7 @@ export function HomePage() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute top-3 left-1/2 z-10 h-[13px] w-[68px] -translate-x-1/2 rounded-full bg-slate-950 shadow-sm"
+                  className="absolute top-3 left-1/2 z-10 size-3.5 -translate-x-1/2 rounded-full border border-slate-700/70 bg-black shadow-[0_0_0_2px_rgba(15,23,42,0.12)]"
                 />
               </div>
             </div>

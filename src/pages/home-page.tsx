@@ -74,7 +74,7 @@ export function HomePage() {
               className="absolute -inset-8 rounded-full bg-primary/15 blur-3xl"
             />
             <div className="relative rounded-[3rem] border border-white/20 bg-[#171717] p-[9px] shadow-[0_35px_100px_-35px_rgba(0,0,0,0.55)]">
-              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.45rem] bg-[#edf2ee] text-slate-900">
+              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.45rem] bg-[#edf2ee]">
                 <img
                   src="/app-preview.png"
                   alt="Ecrã da aplicação Viora"
@@ -87,33 +87,7 @@ export function HomePage() {
                   className="absolute top-3 left-1/2 z-10 h-[13px] w-[68px] -translate-x-1/2 rounded-full bg-slate-950 shadow-sm"
                 />
               </div>
-
-                  <div className="mt-4 flex items-center gap-3 rounded-2xl bg-slate-50 p-3">
-                    <div className="grid size-9 place-items-center rounded-xl bg-primary/10 text-primary">
-                      <MapPin aria-hidden="true" className="size-4" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-xs font-semibold">
-                        {t.home.previewMap}
-                      </p>
-                      <p className="mt-0.5 text-[10px] text-slate-500">
-                        {t.home.previewMapCaption}
-                      </p>
-                    </div>
-                    <span className="size-2 rounded-full bg-emerald-500" />
-                  </div>
-
-                  <div className="mt-5 flex items-center justify-around border-t border-slate-100 pt-4 text-slate-400">
-                    <MapPin
-                      aria-hidden="true"
-                      className="size-[18px] text-primary"
-                    />
-                    <Compass aria-hidden="true" className="size-[18px]" />
-                    <Users aria-hidden="true" className="size-[18px]" />
-                    <UserRound aria-hidden="true" className="size-[18px]" />
-                  </div>
-                </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>

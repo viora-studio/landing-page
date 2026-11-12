@@ -1,0 +1,148 @@
+export type Language = "pt" | "en"
+
+export const translations = {
+  pt: {
+    nav: {
+      home: "Início",
+      privacy: "Privacidade",
+      terms: "Termos",
+      language: "English",
+    },
+    home: {
+      title: "Viora está a chegar.",
+      subtitle: "Esta é uma frase de teste para a página principal.",
+    },
+    footer: {
+      rights: "© {{year}} Viora. Todos os direitos reservados.",
+      privacy: "Política de Privacidade",
+      terms: "Termos e Condições",
+    },
+    privacy: {
+      badge: "Última atualização: Julho 2026",
+      title: "Política de Privacidade",
+      intro: "Na <strong>Viora</strong>, desenvolvida pela <strong>SaturnixStudio</strong>, levamos a tua privacidade a sério. Esta política explica como recolhemos, utilizamos e protegemos os teus dados pessoais quando usas a nossa aplicação móvel.",
+      compliance: "Esta política aplica-se aos utilizadores da aplicação <strong>Viora</strong> (iOS e Android) e está em conformidade com o Regulamento Geral de Proteção de Dados (RGPD – UE 2016/679).",
+      sections: {
+        dataCollected: {
+          title: "1. Dados que Recolhemos",
+          provided: { subtitle: "Dados fornecidos por ti", text: "Quando crias uma conta na Viora, recolhemos o teu nome de utilizador, endereço de email e palavra-passe (encriptada). Podes opcionalmente fornecer uma foto de perfil e uma breve biografia." },
+          location: { subtitle: "Dados de localização", text: "A Viora é uma aplicação baseada em localização. Recolhemos dados de geolocalização em tempo real enquanto a aplicação está ativa, para permitir funcionalidades como partilha de localização e descoberta de utilizadores próximos. Podes revogar esta permissão a qualquer momento nas definições do teu dispositivo." },
+          usage: { subtitle: "Dados de utilização", text: "Recolhemos informação sobre como utilizas a aplicação, incluindo ações realizadas, funcionalidades acedidas, erros e dados de performance. Estes dados ajudam-nos a melhorar a experiência." },
+          device: { subtitle: "Dados de dispositivo", text: "Recolhemos automaticamente informação sobre o teu dispositivo, como o modelo, sistema operativo, identificadores únicos de dispositivo e informação de rede." },
+        },
+        dataUse: { title: "2. Como Utilizamos os Teus Dados", text: "Utilizamos os dados recolhidos para: fornecer, manter e melhorar os serviços da Viora; personalizar a tua experiência e mostrar utilizadores ou conteúdos relevantes; processar e gerir a tua conta; enviar notificações relacionadas com o serviço; garantir a segurança e prevenir abusos ou atividades fraudulentas; cumprir obrigações legais." },
+        dataSharing: {
+          title: "3. Partilha de Dados",
+          users: { subtitle: "Com outros utilizadores", text: "O teu nome de utilizador, foto de perfil e localização aproximada (se ativada) são visíveis para outros utilizadores conforme as tuas definições de privacidade." },
+          thirdParty: { subtitle: "Com terceiros", text: "Não vendemos os teus dados pessoais a terceiros. Podemos partilhar dados com prestadores de serviços que nos auxiliam nas operações (ex: serviços de cloud, análise de dados), sempre sob acordo de confidencialidade." },
+          legal: { subtitle: "Por obrigação legal", text: "Podemos divulgar dados se exigido por lei, ordem judicial ou autoridade competente." },
+        },
+        rights: { title: "4. Os Teus Direitos (RGPD)", text: "Ao abrigo do Regulamento Geral de Proteção de Dados (RGPD), tens os seguintes direitos: acesso aos teus dados pessoais; retificação de dados incorretos ou incompletos; apagamento dos teus dados ('direito a ser esquecido'); limitação ou oposição ao tratamento; portabilidade dos dados; retirar o consentimento a qualquer momento. Para exercer estes direitos, contacta-nos pelo email indicado abaixo." },
+        retention: { title: "5. Retenção de Dados", text: "Mantemos os teus dados enquanto a tua conta estiver ativa. Após eliminares a conta, os teus dados pessoais são apagados no prazo de 30 dias, exceto quando a retenção seja exigida por lei. Dados anonimizados e agregados podem ser mantidos por período indefinido para fins analíticos." },
+        security: { title: "6. Segurança", text: "Implementamos medidas técnicas e organizativas adequadas para proteger os teus dados contra acesso não autorizado, alteração, divulgação ou destruição. Utilizamos encriptação em trânsito (HTTPS/TLS) e em repouso para dados sensíveis. Apesar dos nossos esforços, nenhum sistema é 100% seguro." },
+        cookies: { title: "7. Cookies e Tecnologias Similares", text: "A aplicação móvel Viora não utiliza cookies de rastreamento de terceiros. Utilizamos armazenamento local no dispositivo (AsyncStorage) exclusivamente para guardar preferências e sessão do utilizador, de forma a melhorar a tua experiência." },
+        contact: { title: "8. Contacto", text: "Para questões relacionadas com privacidade ou para exercer os teus direitos, contacta-nos através do email: privacy@saturnixstudio.com. Responderemos no prazo máximo de 30 dias." },
+      },
+    },
+    terms: {
+      badge: "Última atualização: Julho 2026",
+      title: "Termos e Condições",
+      intro: "Estes Termos e Condições regem a tua utilização da aplicação <strong>Viora</strong>, desenvolvida e operada pela <strong>SaturnixStudio</strong>. Lê-os atentamente antes de utilizar o serviço.",
+      updated: "Última atualização: 30 de Julho de 2026. A versão anterior permanece disponível a pedido.",
+      sections: {
+        acceptance: { title: "1. Aceitação dos Termos", text: "Ao descarregar, instalar ou utilizar a aplicação Viora, aceitas ficar vinculado a estes Termos e Condições. Se não concordares com qualquer parte destes termos, não deves utilizar a aplicação. A utilização continuada após alterações aos termos constitui aceitação das mesmas." },
+        eligibility: {
+          title: "2. Elegibilidade e Conta",
+          age: { subtitle: "Idade mínima", text: "Deves ter pelo menos 16 anos para usar a Viora. Ao criar uma conta, confirmas que tens a idade mínima exigida. Caso sejas menor de 18 anos, recomendamos que obtenhas o consentimento de um encarregado de educação." },
+          responsibility: { subtitle: "Responsabilidade da conta", text: "És responsável por manter a confidencialidade das tuas credenciais de acesso e por todas as atividades realizadas na tua conta. Deves notificar-nos imediatamente em caso de suspeita de acesso não autorizado." },
+          oneAccount: { subtitle: "Uma conta por utilizador", text: "Cada pessoa pode ter apenas uma conta ativa. A criação de múltiplas contas para contornar suspensões ou restrições é proibida." },
+        },
+        usage: {
+          title: "3. Utilização do Serviço",
+          license: { subtitle: "Licença de utilização", text: "A SaturnixStudio concede-te uma licença pessoal, não exclusiva, intransmissível e revogável para utilizar a aplicação Viora para fins pessoais e não comerciais, sujeita a estes Termos." },
+          ugc: { subtitle: "Conteúdo gerado pelo utilizador", text: "Ao partilhares conteúdo na Viora (mensagens, fotos, localização), concedes à SaturnixStudio uma licença mundial, não exclusiva e gratuita para utilizar, armazenar e transmitir esse conteúdo exclusivamente para fins de operação do serviço." },
+        },
+        prohibited: { title: "4. Comportamento Proibido", text: "É estritamente proibido: publicar ou partilhar conteúdo ilegal, ofensivo, difamatório, discriminatório ou que promova violência; assediar, intimidar ou stalkear outros utilizadores; falsificar a tua identidade ou localização; usar a aplicação para fins comerciais não autorizados; tentar aceder de forma não autorizada aos sistemas da Viora; distribuir malware, spam ou conteúdo prejudicial; recolher dados de outros utilizadores sem autorização; violar direitos de propriedade intelectual de terceiros." },
+        location: { title: "5. Localização e Segurança", text: "A Viora é uma aplicação baseada em localização. Tens controlo total sobre a partilha da tua localização através das definições da aplicação. Recomendamos cautela ao partilhar a tua localização em tempo real. A SaturnixStudio não se responsabiliza por interações entre utilizadores que resultem de funcionalidades de localização." },
+        ip: { title: "6. Propriedade Intelectual", text: "Todo o conteúdo da aplicação Viora — incluindo design, logótipos, código, gráficos e textos — é propriedade da SaturnixStudio ou dos seus licenciadores, protegido por leis de propriedade intelectual. É proibido reproduzir, distribuir ou criar obras derivadas sem autorização expressa por escrito." },
+        liability: { title: "7. Limitação de Responsabilidade", text: "O serviço é fornecido 'tal como está', sem garantias de qualquer tipo. A SaturnixStudio não garante disponibilidade ininterrupta do serviço. Na máxima extensão permitida por lei, a SaturnixStudio não será responsável por danos indiretos, incidentais ou consequentes decorrentes da utilização ou incapacidade de utilização da aplicação." },
+        termination: { title: "8. Suspensão e Encerramento", text: "Reservamo-nos o direito de suspender ou encerrar a tua conta, com ou sem aviso prévio, em caso de violação destes Termos, comportamento prejudicial para outros utilizadores ou para a plataforma, ou por inatividade prolongada. Podes encerrar a tua conta a qualquer momento nas definições da aplicação." },
+        law: { title: "9. Lei Aplicável e Jurisdição", text: "Estes Termos são regidos pela lei portuguesa. Qualquer litígio emergente da utilização da Viora será submetido à jurisdição exclusiva dos tribunais portugueses, sem prejuízo de normas imperativas de proteção do consumidor aplicáveis." },
+        changes: { title: "10. Alterações aos Termos", text: "Podemos atualizar estes Termos periodicamente. Notificaremos os utilizadores de alterações significativas através da aplicação ou por email. A versão mais recente estará sempre disponível nesta página. Recomendamos que a reveja regularmente." },
+        contact: { title: "11. Contacto", text: "Para questões sobre estes Termos e Condições, contacta-nos: legal@saturnixstudio.com. SaturnixStudio — Porto, Portugal." },
+      },
+    },
+  },
+  en: {
+    nav: {
+      home: "Home",
+      privacy: "Privacy",
+      terms: "Terms",
+      language: "Português",
+    },
+    home: {
+      title: "Viora is coming.",
+      subtitle: "This is a test sentence for the homepage.",
+    },
+    footer: {
+      rights: "© {{year}} Viora. All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms and Conditions",
+    },
+    privacy: {
+      badge: "Last updated: July 2026",
+      title: "Privacy Policy",
+      intro: "At <strong>Viora</strong>, developed by <strong>SaturnixStudio</strong>, we take your privacy seriously. This policy explains how we collect, use and protect your personal data when you use our mobile application.",
+      compliance: "This policy applies to users of the <strong>Viora</strong> application (iOS and Android) and complies with the General Data Protection Regulation (GDPR – EU 2016/679).",
+      sections: {
+        dataCollected: {
+          title: "1. Information We Collect",
+          provided: { subtitle: "Information you provide", text: "When you create a Viora account, we collect your username, email address and password (encrypted). You may optionally provide a profile photo and a short bio." },
+          location: { subtitle: "Location data", text: "Viora is a location-based application. We collect real-time geolocation data while the application is active to enable features such as location sharing and discovering nearby users. You can revoke this permission at any time in your device settings." },
+          usage: { subtitle: "Usage data", text: "We collect information about how you use the application, including actions performed, features accessed, errors and performance data. This information helps us improve the experience." },
+          device: { subtitle: "Device data", text: "We automatically collect information about your device, such as its model, operating system, unique device identifiers and network information." },
+        },
+        dataUse: { title: "2. How We Use Your Data", text: "We use the collected data to: provide, maintain and improve Viora services; personalise your experience and show relevant users or content; process and manage your account; send service-related notifications; ensure security and prevent abuse or fraudulent activity; comply with legal obligations." },
+        dataSharing: {
+          title: "3. Data Sharing",
+          users: { subtitle: "With other users", text: "Your username, profile photo and approximate location (if enabled) are visible to other users according to your privacy settings." },
+          thirdParty: { subtitle: "With third parties", text: "We do not sell your personal data to third parties. We may share data with service providers who support our operations (e.g. cloud services and data analytics), always under confidentiality agreements." },
+          legal: { subtitle: "For legal reasons", text: "We may disclose data when required by law, court order or a competent authority." },
+        },
+        rights: { title: "4. Your Rights (GDPR)", text: "Under the General Data Protection Regulation (GDPR), you have the following rights: access to your personal data; rectification of inaccurate or incomplete data; erasure of your data ('right to be forgotten'); restriction of or objection to processing; data portability; withdrawal of consent at any time. To exercise these rights, contact us at the email address below." },
+        retention: { title: "5. Data Retention", text: "We keep your data while your account is active. After you delete your account, your personal data is erased within 30 days, except where retention is required by law. Anonymised and aggregated data may be retained indefinitely for analytical purposes." },
+        security: { title: "6. Security", text: "We implement appropriate technical and organisational measures to protect your data against unauthorised access, alteration, disclosure or destruction. We use encryption in transit (HTTPS/TLS) and at rest for sensitive data. Despite our efforts, no system is 100% secure." },
+        cookies: { title: "7. Cookies and Similar Technologies", text: "The Viora mobile application does not use third-party tracking cookies. We use local storage on the device (AsyncStorage) exclusively to save user preferences and session information in order to improve your experience." },
+        contact: { title: "8. Contact", text: "For privacy-related questions or to exercise your rights, contact us at: privacy@saturnixstudio.com. We will respond within a maximum of 30 days." },
+      },
+    },
+    terms: {
+      badge: "Last updated: July 2026",
+      title: "Terms and Conditions",
+      intro: "These Terms and Conditions govern your use of the <strong>Viora</strong> application, developed and operated by <strong>SaturnixStudio</strong>. Please read them carefully before using the service.",
+      updated: "Last updated: 30 July 2026. The previous version remains available upon request.",
+      sections: {
+        acceptance: { title: "1. Acceptance of Terms", text: "By downloading, installing or using the Viora application, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, you must not use the application. Continued use after changes to the terms constitutes acceptance of those changes." },
+        eligibility: {
+          title: "2. Eligibility and Account",
+          age: { subtitle: "Minimum age", text: "You must be at least 16 years old to use Viora. By creating an account, you confirm that you meet the minimum age requirement. If you are under 18, we recommend obtaining consent from a parent or legal guardian." },
+          responsibility: { subtitle: "Account responsibility", text: "You are responsible for keeping your login credentials confidential and for all activities carried out through your account. You must notify us immediately if you suspect unauthorised access." },
+          oneAccount: { subtitle: "One account per user", text: "Each person may have only one active account. Creating multiple accounts to circumvent suspensions or restrictions is prohibited." },
+        },
+        usage: {
+          title: "3. Use of the Service",
+          license: { subtitle: "Licence to use", text: "SaturnixStudio grants you a personal, non-exclusive, non-transferable and revocable licence to use the Viora application for personal and non-commercial purposes, subject to these Terms." },
+          ugc: { subtitle: "User-generated content", text: "When you share content on Viora (messages, photos, location), you grant SaturnixStudio a worldwide, non-exclusive and royalty-free licence to use, store and transmit that content solely for operating the service." },
+        },
+        prohibited: { title: "4. Prohibited Conduct", text: "You are strictly prohibited from: publishing or sharing illegal, offensive, defamatory or discriminatory content, or content that promotes violence; harassing, intimidating or stalking other users; falsifying your identity or location; using the application for unauthorised commercial purposes; attempting to gain unauthorised access to Viora systems; distributing malware, spam or harmful content; collecting other users' data without authorisation; infringing third-party intellectual property rights." },
+        location: { title: "5. Location and Safety", text: "Viora is a location-based application. You have full control over location sharing through the application settings. We recommend exercising caution when sharing your real-time location. SaturnixStudio is not responsible for interactions between users resulting from location features." },
+        ip: { title: "6. Intellectual Property", text: "All content in the Viora application — including design, logos, code, graphics and text — is the property of SaturnixStudio or its licensors and is protected by intellectual property laws. Reproducing, distributing or creating derivative works without express written permission is prohibited." },
+        liability: { title: "7. Limitation of Liability", text: "The service is provided 'as is', without warranties of any kind. SaturnixStudio does not guarantee uninterrupted service availability. To the maximum extent permitted by law, SaturnixStudio shall not be liable for indirect, incidental or consequential damages arising from the use of, or inability to use, the application." },
+        termination: { title: "8. Suspension and Termination", text: "We reserve the right to suspend or terminate your account, with or without prior notice, in the event of a breach of these Terms, conduct harmful to other users or the platform, or prolonged inactivity. You may close your account at any time in the application settings." },
+        law: { title: "9. Governing Law and Jurisdiction", text: "These Terms are governed by Portuguese law. Any dispute arising from the use of Viora shall be subject to the exclusive jurisdiction of the Portuguese courts, without prejudice to mandatory applicable consumer protection rules." },
+        changes: { title: "10. Changes to These Terms", text: "We may update these Terms periodically. We will notify users of significant changes through the application or by email. The latest version will always be available on this page. We recommend reviewing it regularly." },
+        contact: { title: "11. Contact", text: "For questions about these Terms and Conditions, contact us at: legal@saturnixstudio.com. SaturnixStudio — Porto, Portugal." },
+      },
+    },
+  },
+} as const

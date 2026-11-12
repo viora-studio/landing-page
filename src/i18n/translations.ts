@@ -1,6 +1,7 @@
 export type Language = "pt" | "en"
 
 export const translations = {
+  pt: {
     nav: {
       home: "Início",
       privacy: "Privacidade",

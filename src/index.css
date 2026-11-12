@@ -164,6 +164,14 @@
   background-size: cover;
 }
 
+/* Keep the light theme transition short and subtle. */
+:root:not(.dark) .home-wallpaper {
+  background-image:
+    linear-gradient(to bottom, transparent 88%, var(--background) 100%),
+    linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
+    url("/wallpaper.avif");
+}
+
 
 html {
   scroll-behavior: smooth;

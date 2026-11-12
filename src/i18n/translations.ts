@@ -4,8 +4,10 @@ export const translations = {
   pt: {
     nav: {
       home: "Início",
+      companies: "Empresas",
       privacy: "Privacidade",
       terms: "Termos",
+      about: "Sobre Nós",
       language: "English",
       languageLabel: "Idioma",
       toggleTheme: "Alterar tema",
@@ -23,13 +25,15 @@ export const translations = {
       sectionEyebrow: "Conhece a aplicação",
       sectionTitle: "O teu mundo mais perto.",
       sectionDescription: "Descobre pessoas e lugares à tua volta e mantém-te ligado ao que acontece perto de ti.",
-      featurePeople: "Pessoas por perto",
-      featurePlaces: "Lugares para descobrir",
-      featureMoments: "Momentos para partilhar",
-      previewEyebrow: "À tua volta",
-      previewNearby: "Pessoas por perto",
-      previewMap: "Explorar o mapa",
-      previewMapCaption: "Descobre o que está à tua volta",
+    },
+    companies: {
+      title: "Empresas",
+    },
+    about: {
+      title: "Sobre Nós",
+    },
+    comingSoon: {
+      status: "Em criação",
     },
     privacy: {
       badge: "Última atualização: Julho 2026",
@@ -90,8 +94,10 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
+      companies: "Companies",
       privacy: "Privacy",
       terms: "Terms",
+      about: "About Us",
       language: "Português",
       languageLabel: "Language",
       toggleTheme: "Toggle theme",
@@ -109,13 +115,15 @@ export const translations = {
       sectionEyebrow: "Meet the app",
       sectionTitle: "Your world, closer.",
       sectionDescription: "Discover people and places around you and stay connected to what is happening nearby.",
-      featurePeople: "People nearby",
-      featurePlaces: "Places to discover",
-      featureMoments: "Moments to share",
-      previewEyebrow: "Around you",
-      previewNearby: "People nearby",
-      previewMap: "Explore the map",
-      previewMapCaption: "Discover what's around you",
+    },
+    companies: {
+      title: "Companies",
+    },
+    about: {
+      title: "About Us",
+    },
+    comingSoon: {
+      status: "Coming soon",
     },
     privacy: {
       badge: "Last updated: July 2026",

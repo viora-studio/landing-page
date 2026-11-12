@@ -20,7 +20,7 @@ const headerVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "floating",
       size: "default",
     },
   }

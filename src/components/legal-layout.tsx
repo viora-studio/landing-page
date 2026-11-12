@@ -1,10 +1,9 @@
-import type { ReactNode } from "react"
 import { Link, NavLink } from "react-router-dom"
 
 import { useLanguage } from "@/i18n/language-provider"
 import type { Language } from "@/i18n/translations"
 
-export function LegalLayout({ children }: { children: ReactNode }) {
+export function LegalLayout({ children }: { children: React.ReactNode }) {
   const { language, setLanguage, t } = useLanguage()
 
   function toggleLanguage() {

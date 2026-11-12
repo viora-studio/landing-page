@@ -29,6 +29,7 @@ export function HomePage() {
               href="#app"
               aria-label={t.home.explore}
               glassRootRef={glassRootRef}
+              className="relative z-10 mt-4 text-white hover:text-white dark:hover:text-white"
             >
               {t.home.explore}
             </LiquidButton>

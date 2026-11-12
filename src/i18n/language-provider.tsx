@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 
 import { translations, type Language } from "./translations"
 
-type TranslationTree = typeof translations.pt
+type TranslationTree = (typeof translations)[Language]
 type LanguageContextValue = {
   language: Language
   setLanguage: (language: Language) => void

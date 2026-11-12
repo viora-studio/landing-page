@@ -21,7 +21,7 @@ export function LegalLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">
-      <Header variant="default">
+      <Header variant="default" className="px-0 py-0">
         <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
           <HeaderBrand>
             <Link to="/" aria-label="Viora home">

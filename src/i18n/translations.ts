@@ -141,7 +141,7 @@ export const translations = {
         termination: { title: "8. Suspension and Termination", text: "We reserve the right to suspend or terminate your account, with or without prior notice, in the event of a breach of these Terms, conduct harmful to other users or the platform, or prolonged inactivity. You may close your account at any time in the application settings." },
         law: { title: "9. Governing Law and Jurisdiction", text: "These Terms are governed by Portuguese law. Any dispute arising from the use of Viora shall be subject to the exclusive jurisdiction of the Portuguese courts, without prejudice to mandatory applicable consumer protection rules." },
         changes: { title: "10. Changes to These Terms", text: "We may update these Terms periodically. We will notify users of significant changes through the application or by email. The latest version will always be available on this page. We recommend reviewing it regularly." },
-        contact: { title: "11. Contact", text: "For questions about these Terms and Conditions, contact us at: legal@saturnixstudio.com. SaturnixStudio — Porto, Portugal." },
+        contact: { title: "11. Contact", text: "For questions about these Terms and Conditions, contact us at: legal@saturnixstudio.com. SaturnixStudio, Porto, Portugal." },
       },
     },
   },

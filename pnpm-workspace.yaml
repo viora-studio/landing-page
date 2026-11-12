@@ -1,6 +1,6 @@
 packages: []
 
 allowBuilds:
-  '@ybouane/liquidglass': true
+  '@ybouane/liquidglass': false
   esbuild: true
   msw: false

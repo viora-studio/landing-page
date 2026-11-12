@@ -24,7 +24,12 @@ export function LegalDocument({
       <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">{badge}</p>
       <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{title}</h1>
       <p className="mt-8 text-lg leading-8 text-muted-foreground" dangerouslySetInnerHTML={{ __html: intro }} />
-      {note ? <p className="mt-5 text-sm leading-7 text-muted-foreground">{note}</p> : null}
+      {note ? (
+        <p
+          className="mt-5 text-sm leading-7 text-muted-foreground"
+          dangerouslySetInnerHTML={{ __html: note }}
+        />
+      ) : null}
       <div className="mt-12 space-y-10">
         {sections.map((section) => (
           <section key={section.title} className="space-y-4">

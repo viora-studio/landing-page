@@ -17,6 +17,9 @@ export const translations = {
       privacy: "Política de Privacidade",
       terms: "Termos e Condições",
     },
+    home: {
+      description: "Uma nova forma de descobrir pessoas, lugares e momentos à tua volta.",
+    },
     privacy: {
       badge: "Última atualização: Julho 2026",
       title: "Política de Privacidade",
@@ -88,6 +91,9 @@ export const translations = {
       rights: "© {{year}} Viora. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms and Conditions",
+    },
+    home: {
+      description: "A new way to discover people, places and moments around you.",
     },
     privacy: {
       badge: "Last updated: July 2026",

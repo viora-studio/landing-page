@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { Compass, MapPin, UserRound, Users } from "lucide-react"
 
 import { LiquidButton } from "@/components/ui/liquid/liquid-button"
 import { useLanguage } from "@/i18n/language-provider"
@@ -51,21 +50,6 @@ export function HomePage() {
             <p className="mt-6 text-base leading-8 text-muted-foreground sm:text-lg">
               {t.home.sectionDescription}
             </p>
-
-            <div className="mt-9 flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm text-foreground">
-                <Users aria-hidden="true" className="size-4 text-primary" />
-                {t.home.featurePeople}
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm text-foreground">
-                <MapPin aria-hidden="true" className="size-4 text-primary" />
-                {t.home.featurePlaces}
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm text-foreground">
-                <Compass aria-hidden="true" className="size-4 text-primary" />
-                {t.home.featureMoments}
-              </span>
-            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-[21rem]">

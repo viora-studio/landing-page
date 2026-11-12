@@ -1,8 +1,8 @@
-import { Compass, MapPin, Search, UserRound, Users } from "lucide-react"
+import { useRef } from "react"
+import { Compass, MapPin, UserRound, Users } from "lucide-react"
 
 import { LiquidButton } from "@/components/ui/liquid/liquid-button"
 import { useLanguage } from "@/i18n/language-provider"
-import { useRef } from "react"
 
 export function HomePage() {
   const { t } = useLanguage()
@@ -87,7 +87,6 @@ export function HomePage() {
                   className="absolute top-3 left-1/2 z-10 h-[13px] w-[68px] -translate-x-1/2 rounded-full bg-slate-950 shadow-sm"
                 />
               </div>
-            </div>
             </div>
           </div>
         </div>

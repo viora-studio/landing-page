@@ -31,6 +31,13 @@ export const translations = {
       description: "Através do Portal de Parceiros da Viora, pode reivindicar e gerir os seus espaços, atualizar informações e acompanhar o desempenho do seu negócio. Tenha acesso a estatísticas, publique eventos e mantenha a presença do seu espaço atualizada num único local.",
       portalLabel: "Portal de Parceiros",
       portalAction: "Aceder ao portal",
+      eyebrow: "Para negócios e espaços",
+      benefits: {
+        claim: { title: "Reivindique o seu espaço", description: "Assuma a gestão da presença do seu estabelecimento na Viora." },
+        manage: { title: "Gira as suas informações", description: "Atualize os dados e mantenha as informações do seu espaço sempre corretas." },
+        stats: { title: "Acompanhe estatísticas", description: "Consulte métricas e acompanhe o desempenho e a visibilidade do seu espaço." },
+        events: { title: "Publique eventos", description: "Divulgue eventos e chegue às pessoas que estão por perto." },
+      },
     },
     about: {
       title: "Sobre Nós",
@@ -123,7 +130,14 @@ export const translations = {
       title: "Partners",
       description: "Through the Viora Partner Portal, you can claim and manage your venues, update their information and monitor your business performance. Access statistics, publish events and keep your venue presence up to date, all in one place.",
       portalLabel: "Viora Partner Portal",
-      portalAction: "Visit the portal",
+      portalAction: "Open the portal",
+      eyebrow: "For businesses and venues",
+      benefits: {
+        claim: { title: "Claim your venue", description: "Take control of your venue’s presence on Viora." },
+        manage: { title: "Manage your information", description: "Update your details and keep your venue information accurate." },
+        stats: { title: "Track your statistics", description: "Explore insights and monitor your venue’s performance and visibility." },
+        events: { title: "Publish events", description: "Promote events and reach people nearby." },
+      },
     },
     about: {
       title: "About Us",

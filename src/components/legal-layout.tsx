@@ -1,6 +1,6 @@
-import { useState, type ReactNode } from "react"
+import { useEffect, useState, type ReactNode } from "react"
 import { Menu, Moon, Sun } from "lucide-react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/ui/footer"
@@ -133,7 +133,20 @@ function NavigationLinks({
 
 export function LegalLayout({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
   const { t } = useLanguage()
+
+  useEffect(() => {
+    const pageTitles: Record<string, string> = {
+      "/companies": t.companies.title,
+      "/privacy": t.privacy.title,
+      "/terms": t.terms.title,
+      "/about": t.about.title,
+    }
+
+    const pageTitle = pageTitles[pathname]
+    document.title = pageTitle ? `${pageTitle} - Viora` : "Viora"
+  }, [pathname, t])
 
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground">

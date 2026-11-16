@@ -1,4 +1,4 @@
-import { ArrowUpRight, Building2, CalendarDays, ChartNoAxesCombined, MapPin } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/i18n/language-provider"
@@ -7,10 +7,10 @@ export function CompaniesPage() {
   const { t } = useLanguage()
 
   const benefits = [
-    { icon: MapPin, title: t.companies.benefits.claim.title, description: t.companies.benefits.claim.description },
-    { icon: Building2, title: t.companies.benefits.manage.title, description: t.companies.benefits.manage.description },
-    { icon: ChartNoAxesCombined, title: t.companies.benefits.stats.title, description: t.companies.benefits.stats.description },
-    { icon: CalendarDays, title: t.companies.benefits.events.title, description: t.companies.benefits.events.description },
+    { title: t.companies.benefits.claim.title, description: t.companies.benefits.claim.description },
+    { title: t.companies.benefits.manage.title, description: t.companies.benefits.manage.description },
+    { title: t.companies.benefits.stats.title, description: t.companies.benefits.stats.description },
+    { title: t.companies.benefits.events.title, description: t.companies.benefits.events.description },
   ]
 
   return (
@@ -41,15 +41,12 @@ export function CompaniesPage() {
       </Button>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
-        {benefits.map(({ icon: Icon, title, description }) => (
+        {benefits.map(({ title, description }) => (
           <div
             key={title}
             className="rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm backdrop-blur"
           >
-            <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <Icon className="size-5" />
-            </div>
-            <h2 className="mt-5 text-lg font-semibold text-foreground">{title}</h2>
+            <h2 className="text-lg font-semibold text-foreground">{title}</h2>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
           </div>
         ))}

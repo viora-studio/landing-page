@@ -14,7 +14,7 @@ export function CompaniesPage() {
   ]
 
   return (
-    <section className="relative flex min-h-[70svh] items-center justify-center overflow-hidden px-5 py-24 sm:px-8">
+    <section className="relative flex min-h-[70svh] items-center justify-center overflow-hidden px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--color-primary)/10,transparent_55%)]" />
       <div className="relative mx-auto w-full max-w-4xl">
         <div className="mx-auto max-w-2xl text-center">

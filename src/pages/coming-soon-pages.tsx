@@ -25,11 +25,19 @@ export function CompaniesPage() {
         {t.companies.description}
       </p>
 
-      <Button asChild size="lg" className="mt-8">
-        <a href="https://partner-viora.rodriaum.com" target="_blank" rel="noreferrer">
-          {t.companies.portalAction}
-          <ArrowUpRight data-icon="inline-end" />
-        </a>
+      <Button
+        size="lg"
+        className="mt-8 gap-2"
+        render={
+          <a
+            href="https://partner-viora.rodriaum.com"
+            target="_blank"
+            rel="noreferrer"
+          />
+        }
+      >
+        <span>{t.companies.portalAction}</span>
+        <ArrowUpRight aria-hidden="true" className="size-4 shrink-0" />
       </Button>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">

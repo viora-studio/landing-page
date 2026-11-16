@@ -55,22 +55,29 @@ export function CompaniesPage() {
   )
 }
 
-function ComingSoonPage({ title }: { title: string }) {
+export function AboutPage() {
   const { t } = useLanguage()
 
   return (
-    <section className="mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
+    <article className="mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
       <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-        {t.comingSoon.status}
+        {t.about.eyebrow}
       </p>
       <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-        {title}
+        {t.about.title}
       </h1>
-    </section>
-  )
-}
+      <p className="mt-8 text-lg leading-8 text-muted-foreground">
+        {t.about.intro}
+      </p>
 
-export function AboutPage() {
-  const { t } = useLanguage()
-  return <ComingSoonPage title={t.about.title} />
+      <section className="mt-12 space-y-4">
+        <h2 className="text-xl font-semibold tracking-tight text-foreground">
+          {t.about.sectionTitle}
+        </h2>
+        <p className="text-base leading-8 text-muted-foreground">
+          {t.about.sectionText}
+        </p>
+      </section>
+    </article>
+  )
 }

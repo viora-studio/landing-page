@@ -4,7 +4,7 @@ export const translations = {
   pt: {
     nav: {
       home: "Início",
-      companies: "Empresas",
+      companies: "Parceiros",
       privacy: "Privacidade",
       terms: "Termos",
       about: "Sobre Nós",
@@ -27,7 +27,10 @@ export const translations = {
       sectionDescription: "Descobre pessoas e lugares à tua volta e mantém-te ligado ao que acontece perto de ti.",
     },
     companies: {
-      title: "Empresas",
+      title: "Parceiros",
+      description: "Através do Portal de Parceiros da Viora, pode reivindicar e gerir os seus espaços, atualizar informações e acompanhar o desempenho do seu negócio. Tenha acesso a estatísticas, publique eventos e mantenha a presença do seu espaço atualizada num único local.",
+      portalLabel: "Portal de Parceiros",
+      portalAction: "Aceder ao portal",
     },
     about: {
       title: "Sobre Nós",
@@ -94,7 +97,7 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
-      companies: "Companies",
+      companies: "Partners",
       privacy: "Privacy",
       terms: "Terms",
       about: "About Us",
@@ -117,7 +120,10 @@ export const translations = {
       sectionDescription: "Discover people and places around you and stay connected to what is happening nearby.",
     },
     companies: {
-      title: "Companies",
+      title: "Partners",
+      description: "Through the Viora Partner Portal, you can claim and manage your venues, update their information and monitor your business performance. Access statistics, publish events and keep your venue presence up to date, all in one place.",
+      portalLabel: "Viora Partner Portal",
+      portalAction: "Visit the portal",
     },
     about: {
       title: "About Us",

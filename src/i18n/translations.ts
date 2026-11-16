@@ -41,6 +41,10 @@ export const translations = {
     },
     about: {
       title: "Sobre Nós",
+      eyebrow: "A nossa missão",
+      intro: "A Viora nasceu com uma ideia simples: aproximar pessoas do que acontece à sua volta. Somos uma plataforma que liga pessoas, lugares e experiências, tornando mais fácil descobrir novos espaços, encontrar atividades e acompanhar o que ganha vida perto de ti.",
+      sectionTitle: "Aproximar o que está à tua volta",
+      sectionText: "Acreditamos que cada lugar tem algo para descobrir e que algumas das melhores experiências estão mesmo ao virar da esquina. Queremos dar visibilidade aos espaços locais e criar oportunidades para pessoas, comunidades e negócios se encontrarem.",
     },
     comingSoon: {
       status: "Em criação",
@@ -141,6 +145,10 @@ export const translations = {
     },
     about: {
       title: "About Us",
+      eyebrow: "Our mission",
+      intro: "Viora started with a simple idea: bring people closer to what is happening around them. We are a platform that connects people, places and experiences, making it easier to discover new venues, find activities and keep up with what is happening nearby.",
+      sectionTitle: "Bringing your surroundings closer",
+      sectionText: "We believe every place has something worth discovering and that some of the best experiences are just around the corner. Our goal is to give local venues greater visibility and create opportunities for people, communities and businesses to connect.",
     },
     comingSoon: {
       status: "Coming soon",

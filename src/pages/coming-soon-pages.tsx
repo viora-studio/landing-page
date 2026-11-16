@@ -62,15 +62,13 @@ function ComingSoonPage({ title }: { title: string }) {
   const { t } = useLanguage()
 
   return (
-    <section className="flex min-h-[70svh] items-center justify-center px-5 py-24 text-center sm:px-8">
-      <div className="mx-auto max-w-2xl">
-        <p className="text-sm font-semibold tracking-[0.2em] text-primary uppercase">
-          {t.comingSoon.status}
-        </p>
-        <h1 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
-          {title}
-        </h1>
-      </div>
+    <section className="mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+        {t.comingSoon.status}
+      </p>
+      <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+        {title}
+      </h1>
     </section>
   )
 }

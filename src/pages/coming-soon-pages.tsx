@@ -14,45 +14,37 @@ export function CompaniesPage() {
   ]
 
   return (
-    <section className="relative flex min-h-[70svh] items-center justify-center overflow-hidden px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--color-primary)/10,transparent_55%)]" />
-      <div className="relative mx-auto w-full max-w-4xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold tracking-[0.2em] text-primary uppercase">
-            {t.companies.eyebrow}
-          </p>
-          <h1 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
-            {t.companies.title}
-          </h1>
-          <p className="mt-6 text-base leading-8 text-muted-foreground sm:text-lg">
-            {t.companies.description}
-          </p>
-          <Button asChild size="lg" className="mt-8">
-            <a href="https://partner-viora.rodriaum.com" target="_blank" rel="noreferrer">
-              {t.companies.portalAction}
-              <ArrowUpRight data-icon="inline-end" />
-            </a>
-          </Button>
-        </div>
+    <section className="relative mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+        {t.companies.eyebrow}
+      </p>
+      <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+        {t.companies.title}
+      </h1>
+      <p className="mt-8 text-lg leading-8 text-muted-foreground">
+        {t.companies.description}
+      </p>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2">
-          {benefits.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm backdrop-blur"
-            >
-              <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Icon className="size-5" />
-              </div>
-              <h2 className="mt-5 text-lg font-semibold text-foreground">{title}</h2>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
+      <Button asChild size="lg" className="mt-8">
+        <a href="https://partner-viora.rodriaum.com" target="_blank" rel="noreferrer">
+          {t.companies.portalAction}
+          <ArrowUpRight data-icon="inline-end" />
+        </a>
+      </Button>
+
+      <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        {benefits.map(({ icon: Icon, title, description }) => (
+          <div
+            key={title}
+            className="rounded-2xl border border-border/60 bg-card/60 p-6 shadow-sm backdrop-blur"
+          >
+            <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <Icon className="size-5" />
             </div>
-          ))}
-        </div>
-
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          {t.companies.portalLabel}
-        </p>
+            <h2 className="mt-5 text-lg font-semibold text-foreground">{title}</h2>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">{description}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

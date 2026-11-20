@@ -1,21 +1,41 @@
-# React + TypeScript + Vite + shadcn/ui
+# Viora Landing Page
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+The official landing page for **Viora**, built with React, TypeScript, Vite, and shadcn/ui.
 
-## Adding components
+This project provides the public-facing website for Viora, introducing the platform and its features through a modern, responsive interface.
 
-To add components to your app, run the following command:
+## Tech Stack
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+
+## Getting Started
+
+Install the dependencies:
 
 ```bash
-npx shadcn@latest add button
+pnpm install
 ```
 
-This will place the ui components in the `src/components` directory.
+Start the development server:
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+pnpm dev
 ```
+
+Build the project for production:
+
+```bash
+pnpm build
+```
+
+## About Viora
+
+Viora is a platform focused on connecting people and places. This repository contains its official landing page.
+
+---
+
+Part of the [Viora](https://github.com/viora-studio) ecosystem.

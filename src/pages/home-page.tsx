@@ -1,5 +1,6 @@
 import { useRef } from "react"
 
+import { AppPreviewTabs } from "@/components/ui/app-preview-tabs"
 import { LiquidButton } from "@/components/ui/liquid/liquid-button"
 import { useLanguage } from "@/i18n/language-provider"
 
@@ -53,36 +54,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-[21rem]">
-            <div
-              aria-hidden="true"
-              className="absolute -inset-8 rounded-full bg-primary/15 blur-3xl"
-            />
-            <div className="relative rounded-[3rem] border border-white/20 bg-[#171717] p-[9px] shadow-[0_35px_100px_-35px_rgba(0,0,0,0.55)]">
-              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.45rem] bg-[#edf2ee]">
-                <img
-                  src="/app-preview-light.png"
-                  alt="Pré-visualização da aplicação Viora em modo claro"
-                  className="absolute inset-0 size-full object-cover dark:hidden"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
-                <img
-                  src="/app-preview-dark.png"
-                  alt="Pré-visualização da aplicação Viora em modo escuro"
-                  className="absolute inset-0 hidden size-full object-cover dark:block"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute top-3 left-1/2 z-10 size-3.5 -translate-x-1/2 rounded-full border border-slate-700/70 bg-black shadow-[0_0_0_2px_rgba(15,23,42,0.12)]"
-                />
-              </div>
-            </div>
-          </div>
+          <AppPreviewTabs />
         </div>
       </section>
     </>

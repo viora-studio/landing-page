@@ -5,7 +5,53 @@ import { Select as SelectPrimitive } from "@base-ui/react/select"
 import { cn } from "cn"
 import { ChevronDownIcon, CheckIcon, ChevronUpIcon } from "lucide-react"
 
-const Select = SelectPrimitive.Root
+type SelectProps = React.ComponentProps<typeof SelectPrimitive.Root>
+type SelectItemProps = Omit<SelectPrimitive.Item.Props, "label"> & {
+  label?: React.ReactNode
+}
+
+type SelectOption = {
+  value: unknown
+  label: React.ReactNode
+}
+
+function getSelectOptions(children: React.ReactNode): SelectOption[] {
+  const options: SelectOption[] = []
+
+  React.Children.forEach(children, (child) => {
+    if (!React.isValidElement(child)) return
+
+    if (child.type === SelectItem) {
+      const item = child.props as SelectItemProps
+
+      if (item.value !== undefined) {
+        options.push({
+          value: item.value,
+          label: item.label ?? item.children ?? String(item.value),
+        })
+      }
+
+      return
+    }
+
+    if (child.type === SelectGroup || child.type === React.Fragment) {
+      const nestedChildren = (child.props as { children?: React.ReactNode }).children
+      options.push(...getSelectOptions(nestedChildren))
+    }
+  })
+
+  return options
+}
+
+function Select({ children, items, ...props }: SelectProps) {
+  const resolvedItems = items ?? getSelectOptions(children)
+
+  return (
+    <SelectPrimitive.Root {...props} items={resolvedItems}>
+      {children}
+    </SelectPrimitive.Root>
+  )
+}
 
 function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   return (
@@ -17,7 +63,10 @@ function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
   )
 }
 
-function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
+function SelectValue({
+  className,
+  ...props
+}: SelectPrimitive.Value.Props) {
   return (
     <SelectPrimitive.Value
       data-slot="select-value"
@@ -110,8 +159,12 @@ function SelectLabel({
 function SelectItem({
   className,
   children,
+  label,
+  value,
   ...props
-}: SelectPrimitive.Item.Props) {
+}: SelectItemProps) {
+  const itemLabel = label ?? children ?? String(value ?? "")
+
   return (
     <SelectPrimitive.Item
       data-slot="select-item"
@@ -119,10 +172,12 @@ function SelectItem({
         "relative flex w-full cursor-default items-center gap-2.5 rounded-xl py-2 pr-8 pl-3 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className
       )}
+      value={value}
+      label={typeof itemLabel === "string" ? itemLabel : undefined}
       {...props}
     >
       <SelectPrimitive.ItemText className="flex flex-1 shrink-0 gap-2 whitespace-nowrap">
-        {children}
+        {itemLabel}
       </SelectPrimitive.ItemText>
       <SelectPrimitive.ItemIndicator
         render={

@@ -19,7 +19,7 @@ export function LegalDocument({
 }) {
   return (
     <article className="mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">{badge}</p>
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand">{badge}</p>
       <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{title}</h1>
       <p className="mt-8 text-lg leading-8 text-muted-foreground" dangerouslySetInnerHTML={{ __html: intro }} />
       {note ? (

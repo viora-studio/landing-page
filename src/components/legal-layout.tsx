@@ -155,7 +155,7 @@ export function LegalLayout({ children }: { children: ReactNode }) {
           <HeaderBrand>
             <Link to="/" aria-label={t.nav.home}>
               <HeaderTitle className="text-xl font-semibold tracking-tight">
-                viora<span className="text-primary">.</span>
+                viora<span className="text-brand">.</span>
               </HeaderTitle>
             </Link>
           </HeaderBrand>
@@ -190,7 +190,7 @@ export function LegalLayout({ children }: { children: ReactNode }) {
                 <SheetContent side="right" className="w-[min(85vw,20rem)]">
                   <SheetHeader>
                     <SheetTitle className="text-lg font-semibold tracking-tight">
-                      viora<span className="text-primary">.</span>
+                      viora<span className="text-brand">.</span>
                     </SheetTitle>
                   </SheetHeader>
 
@@ -219,7 +219,10 @@ export function LegalLayout({ children }: { children: ReactNode }) {
       <Footer>
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-7 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>
-            {t.footer.rights.replace("{{year}}", String(new Date().getFullYear()))}
+            {t.footer.rights.replace(
+              "{{year}}",
+              String(new Date().getFullYear())
+            )}
           </span>
           <nav aria-label={t.nav.navigationLabel} className="flex gap-5">
             <Link className="hover:text-foreground" to="/privacy">

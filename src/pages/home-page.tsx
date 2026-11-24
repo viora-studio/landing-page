@@ -16,7 +16,7 @@ export function HomePage() {
             Viora
             <span
               aria-hidden="true"
-              className="animate-viora-dot-blink text-primary"
+              className="animate-viora-dot-blink text-brand"
             >
               .
             </span>
@@ -43,7 +43,7 @@ export function HomePage() {
       >
         <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1fr_0.9fr] lg:gap-24">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold tracking-[0.2em] text-primary uppercase">
+            <p className="text-sm font-semibold tracking-[0.2em] text-brand uppercase">
               {t.home.sectionEyebrow}
             </p>
             <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">

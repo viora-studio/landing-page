@@ -15,7 +15,7 @@ export function CompaniesPage() {
 
   return (
     <section className="relative mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand">
         {t.companies.eyebrow}
       </p>
       <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -60,7 +60,7 @@ export function AboutPage() {
 
   return (
     <article className="mx-auto w-full max-w-3xl px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+      <p className="mb-5 text-xs font-semibold tracking-[0.18em] text-brand uppercase">
         {t.about.eyebrow}
       </p>
       <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">

@@ -34,7 +34,7 @@ export function HomePage() {
           href="#app"
           aria-label={t.home.explore}
           glassRootRef={glassRootRef}
-          className="relative z-10 mx-auto mt-12 w-fit max-w-6xl text-white hover:text-white dark:hover:text-white"
+          className="relative z-10 mt-8 w-fit text-white hover:text-white dark:hover:text-white"
         >
           {t.home.explore}
         </LiquidButton>

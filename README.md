@@ -36,6 +36,10 @@ pnpm build
 
 Viora is a platform focused on connecting people and places. This repository contains its official landing page.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ---
 
 Part of the [Viora](https://github.com/viora-studio) ecosystem.

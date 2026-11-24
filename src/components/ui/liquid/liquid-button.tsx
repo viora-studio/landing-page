@@ -53,11 +53,11 @@ export function LiquidButton({
       }
       size="lg"
       className={cn(
-        "bg-transparent text-foreground shadow-none hover:bg-transparent",
+        "bg-transparent !text-white shadow-none hover:bg-transparent",
         glassStatus === "loading" &&
           "pointer-events-none relative overflow-hidden rounded-full border border-white/40 !bg-white/20 !text-transparent shadow-lg backdrop-blur-md dark:border-white/20 dark:!bg-white/10",
         glassStatus === "ready" &&
-          "relative z-10 rounded-full border border-white/60 !bg-white/25 !text-foreground shadow-lg backdrop-blur-md hover:!bg-white/35 focus-visible:ring-offset-2 dark:border-white/30 dark:!bg-white/10 dark:!text-foreground dark:hover:!bg-white/20",
+          "relative z-10 rounded-full border border-white/60 !bg-white/25 !text-white shadow-lg backdrop-blur-md hover:!bg-white/35 focus-visible:ring-offset-2 dark:border-white/30 dark:!bg-white/10 dark:!text-white dark:hover:!bg-white/20",
         className
       )}
     >

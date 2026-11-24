@@ -12,7 +12,7 @@ export function HomePage() {
     <>
       <section
         ref={glassRootRef}
-        className="relative isolate flex min-h-svh flex-col justify-center px-5 py-24 sm:px-8"
+        className="relative isolate flex min-h-svh flex-col justify-center overflow-hidden px-5 py-24 sm:px-8"
       >
         <div
           aria-hidden="true"
@@ -34,7 +34,7 @@ export function HomePage() {
           href="#app"
           aria-label={t.home.explore}
           glassRootRef={glassRootRef}
-          className="relative z-10 mx-auto mt-8 w-fit max-w-6xl text-white hover:text-white dark:hover:text-white"
+          className="relative z-10 mx-auto mt-12 w-fit max-w-6xl text-white hover:text-white dark:hover:text-white"
         >
           {t.home.explore}
         </LiquidButton>

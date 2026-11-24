@@ -12,13 +12,13 @@ export function HomePage() {
     <>
       <section
         ref={glassRootRef}
-        className="relative isolate flex min-h-svh flex-col justify-center overflow-hidden px-5 py-24 sm:px-8"
+        className="relative isolate grid min-h-svh grid-cols-[minmax(1.25rem,1fr)_minmax(0,72rem)_minmax(1.25rem,1fr)] content-center overflow-hidden py-24"
       >
         <div
           aria-hidden="true"
           className="home-wallpaper pointer-events-none absolute inset-0"
         />
-        <h1 className="relative z-10 mx-auto w-full max-w-6xl text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:text-7xl">
+        <h1 className="relative z-10 col-start-2 text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:text-7xl">
           Viora
           <span
             aria-hidden="true"
@@ -27,14 +27,14 @@ export function HomePage() {
             .
           </span>
         </h1>
-        <p className="relative z-10 mx-auto mt-4 w-full max-w-6xl text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
+        <p className="relative z-10 col-start-2 mt-4 text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
           {t.home.description}
         </p>
         <LiquidButton
           href="#app"
           aria-label={t.home.explore}
           glassRootRef={glassRootRef}
-          className="relative z-10 mt-8 w-fit text-white hover:text-white dark:hover:text-white"
+          className="relative z-10 col-start-2 mt-8 w-fit justify-self-start text-white hover:text-white dark:hover:text-white"
         >
           {t.home.explore}
         </LiquidButton>

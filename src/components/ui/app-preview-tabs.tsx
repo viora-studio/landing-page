@@ -7,7 +7,6 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 
 type Platform = "android" | "ios"
-type Appearance = "light" | "dark"
 
 export interface AppPreviewTabsProps {
   /** Screenshots for each platform and appearance. */

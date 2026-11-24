@@ -185,7 +185,7 @@
   background-image:
     linear-gradient(to bottom, transparent 58%, var(--background) 100%),
     linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
-    url("/wallpaper.avif");
+    url("/wallpaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -195,7 +195,7 @@
 :root:not(.dark) .home-wallpaper {
   background-image:
     linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
-    url("/wallpaper.avif");
+    url("/wallpaper.jpg");
 }
 
 

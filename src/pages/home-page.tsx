@@ -12,32 +12,32 @@ export function HomePage() {
     <>
       <section
         ref={glassRootRef}
-        className="home-wallpaper relative isolate min-h-svh overflow-hidden"
+        className="relative isolate flex min-h-svh flex-col justify-center px-5 py-24 sm:px-8"
       >
-        <div className="mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
-          <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:text-7xl">
-            Viora
-            <span
-              aria-hidden="true"
-              className="animate-viora-dot-blink text-brand"
-            >
-              .
-            </span>
-          </h1>
-          <p className="mt-4 max-w-xl text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
-            {t.home.description}
-          </p>
-          <div className="mt-8">
-            <LiquidButton
-              href="#app"
-              aria-label={t.home.explore}
-              glassRootRef={glassRootRef}
-              className="relative z-10 mt-4 text-white hover:text-white dark:hover:text-white"
-            >
-              {t.home.explore}
-            </LiquidButton>
-          </div>
-        </div>
+        <div
+          aria-hidden="true"
+          className="home-wallpaper pointer-events-none absolute inset-0"
+        />
+        <h1 className="relative z-10 mx-auto w-full max-w-6xl text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:text-7xl">
+          Viora
+          <span
+            aria-hidden="true"
+            className="animate-viora-dot-blink text-brand"
+          >
+            .
+          </span>
+        </h1>
+        <p className="relative z-10 mx-auto mt-4 w-full max-w-6xl text-base leading-7 text-white/80 drop-shadow sm:text-lg sm:leading-8">
+          {t.home.description}
+        </p>
+        <LiquidButton
+          href="#app"
+          aria-label={t.home.explore}
+          glassRootRef={glassRootRef}
+          className="relative z-10 mx-auto mt-8 w-fit max-w-6xl text-white hover:text-white dark:hover:text-white"
+        >
+          {t.home.explore}
+        </LiquidButton>
       </section>
 
       <section

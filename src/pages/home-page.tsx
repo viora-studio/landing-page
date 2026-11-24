@@ -10,7 +10,10 @@ export function HomePage() {
 
   return (
     <>
-      <section ref={glassRootRef} className="home-wallpaper min-h-svh">
+      <section
+        ref={glassRootRef}
+        className="home-wallpaper relative isolate min-h-svh overflow-hidden"
+      >
         <div className="mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
           <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:text-7xl">
             Viora
